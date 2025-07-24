@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from '@/components/Navigation';
+import HeroSection from '@/components/HeroSection';
+import AfricanLegends from '@/components/AfricanLegends';
+import RebelSound from '@/components/RebelSound';
+import CosmicKnowledge from '@/components/CosmicKnowledge';
+import PlatformModules from '@/components/PlatformModules';
+import Footer from '@/components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      {/* Navigation */}
+      <Navigation />
+      
+      {/* Main Content */}
+      <main className="pt-16">
+        <HeroSection />
+        <AfricanLegends />
+        <RebelSound />
+        <CosmicKnowledge />
+        <PlatformModules />
+      </main>
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

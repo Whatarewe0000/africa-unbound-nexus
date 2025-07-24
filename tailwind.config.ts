@@ -32,6 +32,15 @@ export default {
 					DEFAULT: 'hsl(var(--secondary))',
 					foreground: 'hsl(var(--secondary-foreground))'
 				},
+				// African cultural colors
+				bronze: {
+					DEFAULT: 'hsl(var(--bronze))',
+					foreground: 'hsl(var(--bronze-foreground))'
+				},
+				cosmic: {
+					DEFAULT: 'hsl(var(--cosmic))',
+					foreground: 'hsl(var(--cosmic-foreground))'
+				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'
@@ -63,6 +72,21 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				}
 			},
+			// African gradients and backgrounds
+			backgroundImage: {
+				'gradient-sunset': 'var(--gradient-sunset)',
+				'gradient-earth': 'var(--gradient-earth)',
+				'gradient-cosmic': 'var(--gradient-cosmic)',
+				'gradient-bronze': 'var(--gradient-bronze)',
+				'gradient-savanna': 'var(--gradient-savanna)',
+			},
+			// Sacred geometry shadows
+			boxShadow: {
+				'glow': 'var(--shadow-glow)',
+				'bronze': 'var(--shadow-bronze)',
+				'cosmic': 'var(--shadow-cosmic)',
+				'sacred': 'var(--shadow-sacred)',
+			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
@@ -70,25 +94,50 @@ export default {
 			},
 			keyframes: {
 				'accordion-down': {
-					from: {
-						height: '0'
-					},
-					to: {
-						height: 'var(--radix-accordion-content-height)'
-					}
+					from: { height: '0' },
+					to: { height: 'var(--radix-accordion-content-height)' }
 				},
 				'accordion-up': {
-					from: {
-						height: 'var(--radix-accordion-content-height)'
-					},
-					to: {
-						height: '0'
-					}
+					from: { height: 'var(--radix-accordion-content-height)' },
+					to: { height: '0' }
+				},
+				// African-inspired animations
+				'bronze-pulse': {
+					'0%, 100%': { filter: 'brightness(1) saturate(1)' },
+					'50%': { filter: 'brightness(1.2) saturate(1.3)' }
+				},
+				'cosmic-drift': {
+					'0%, 100%': { transform: 'rotate(0deg) scale(1)' },
+					'25%': { transform: 'rotate(1deg) scale(1.02)' },
+					'50%': { transform: 'rotate(0deg) scale(1.05)' },
+					'75%': { transform: 'rotate(-1deg) scale(1.02)' }
+				},
+				'sacred-geometry': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				},
+				'ancestral-glow': {
+					'0%, 100%': { opacity: '0.3' },
+					'50%': { opacity: '1' }
+				},
+				'fade-in-up': {
+					'0%': { opacity: '0', transform: 'translateY(30px)' },
+					'100%': { opacity: '1', transform: 'translateY(0)' }
+				},
+				'scale-in': {
+					'0%': { opacity: '0', transform: 'scale(0.9)' },
+					'100%': { opacity: '1', transform: 'scale(1)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bronze-pulse': 'bronze-pulse 3s ease-in-out infinite',
+				'cosmic-drift': 'cosmic-drift 8s ease-in-out infinite',
+				'sacred-geometry': 'sacred-geometry 20s linear infinite',
+				'ancestral-glow': 'ancestral-glow 2s ease-in-out infinite',
+				'fade-in-up': 'fade-in-up 0.6s ease-out',
+				'scale-in': 'scale-in 0.4s ease-out'
 			}
 		}
 	},
